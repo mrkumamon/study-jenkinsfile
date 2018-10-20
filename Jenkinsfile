@@ -7,7 +7,7 @@ node {
       stage('Deploy') {
       print("BuildResult="+currentBuild.result)
       if (currentBuild.result == null || currentBuild.result == 'SUCCESS') {
-              sh 'echo publishing.......
+              sh 'echo publishing.......'
           }
       }
     }
