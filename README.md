@@ -1,3 +1,8 @@
+# start jenkins
+```
+docker run -u root --rm -d --name jenkins -p 8080:8080 -p 50000:50000 -p 8000:80 -p 4430:443 -v jenkins-data:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock jenkinsci/blueocean
+```
+
 # study-jenkinsfile
 
 because jenkinsfile is at the root of project, so it can make and archive the project.
