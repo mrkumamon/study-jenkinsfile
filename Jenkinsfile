@@ -19,23 +19,7 @@ node {
           sh 'exit 1'
       }
       catch (exc) {
-          warn 'this is warn'
-      }finally{
-        echo "this is fine"
-      }
-
-      try {
-          sh 'exit 1'
-      }
-      catch (exc) {
           error 'Something failed, I should sound the klaxons!'
-      }
-
-      try {
-          sh 'exit 1'
-      }
-      catch (exc) {
-          warm 'this is warm'
       }finally{
         echo "this is fine"
       }
