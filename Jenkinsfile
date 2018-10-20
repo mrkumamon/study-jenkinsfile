@@ -4,8 +4,14 @@ echo 'Hello Mr. ${username}'
 echo "I said, Hello Mr. ${username}"
 
 node {
+
+    withEnv(["whoami=GabrielWu"]) {
+
+    }
+
     stage('Test Baidu') {
         sh "curl baidu.com"
+        sh "echo Let me introduce ${env.whoami}"
     }
     stage('Deploy') {
       stage('Deploy') {
@@ -14,6 +20,6 @@ node {
               sh "echo publishing to.......${username}"
           }
       }
-      echo "${env.BUILD_ID} on ${env.JENKINS_URL} is complete"
+      echo "Build Id ${env.BUILD_ID} on ${env.JENKINS_URL} is complete"
     }
 }
