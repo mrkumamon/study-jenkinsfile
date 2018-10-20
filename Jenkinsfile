@@ -9,12 +9,12 @@ node {
       echo "what's ${env.whoami}, what's ${env.second}, what's ${env.third}"
     }
     stage('scripted 01') {
-      if(env.whoami=="GabrielWu"){
-        echo "this whoami = ${env.whoami}"
-      }else{
-        echo "this whoami = not sure"
-      }
-
+      // if(env.whoami=="GabrielWu"){
+      //   echo "this whoami = ${env.whoami}"
+      // }else{
+      //   echo "this whoami = not sure"
+      // }
+      //
       try {
           sh 'exit 1'
       }
