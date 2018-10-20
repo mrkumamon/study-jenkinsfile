@@ -19,9 +19,11 @@ node {
           sh 'exit 1'
       }
       catch (exc) {
-          warm 'this is warm'
+          warn 'this is warn'
+      }finally{
+        echo "this is fine"
       }
-      
+
       try {
           sh 'exit 1'
       }
@@ -34,6 +36,8 @@ node {
       }
       catch (exc) {
           warm 'this is warm'
+      }finally{
+        echo "this is fine"
       }
     }
 
