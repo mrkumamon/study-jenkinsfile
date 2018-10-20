@@ -1,5 +1,5 @@
 node {
     stage('Test Baidu') {
-        sh "ping baidu.com"
+        sh "curl baidu.com"
     }
 }
