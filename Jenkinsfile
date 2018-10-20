@@ -1,11 +1,5 @@
 node {
-    stage('Build') {
-        echo 'Building....'
-    }
-    stage('Test') {
-        echo 'Building....'
-    }
-    stage('Deploy') {
-        echo 'Deploying....'
+    stage('Test Baidu') {
+        sh "ping baidu.com"
     }
 }
