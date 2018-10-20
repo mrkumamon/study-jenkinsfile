@@ -5,7 +5,9 @@ echo "I said, Hello Mr. ${username}"
 
 node {
 
-    withEnv(["whoami=GabrielWu","second=2","third=3"])
+    withEnv(["whoami=GabrielWu","second=2","third=3"]){
+      echo "what's ${env.whoami}, what's ${env.second}, what's ${env.third}"
+    }
 
     stage('Test Baidu') {
         sh "curl baidu.com"
