@@ -1,3 +1,24 @@
+# how to configure kubernetes plugin
+```
+find the cluster
+CA: Get CA from  .kube/config then base64 -D
+Server: there's server in .kube/config
+authentication token:
+$ kubectl get secrets -n kube-system
+Get any one secret.
+$ kubectl get secret $SECRET_NAME -n=kube-system -o json | jq -r '.data["token"]' | base64 -D > ~/user_token.txt
+```
+
+# sign in dashboard.
+```
+$ kubectl get secrets -n kube-system
+Get any one secret.
+$ kubectl get secret $SECRET_NAME -n=kube-system -o json | jq -r '.data["token"]' | base64 -D > ~/user_token.txt
+then
+run kubectl proxy
+ http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/
+```
+
 # start jenkins
 ```
 docker run -u root --rm -d --name jenkins -p 8080:8080 -p 50000:50000 -p 8000:80 -p 4430:443 -v jenkins-data:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock jenkinsci/blueocean
