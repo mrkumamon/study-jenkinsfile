@@ -14,5 +14,6 @@ node {
               sh "echo publishing to.......${username}"
           }
       }
+      echo "${env.BUILD_ID} on ${env.JENKINS_URL} is complete"
     }
 }

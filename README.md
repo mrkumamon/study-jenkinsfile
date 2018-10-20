@@ -16,3 +16,4 @@ def username = 'Jenkins'
 echo 'Hello Mr. ${username}'
 echo "I said, Hello Mr. ${username}"
 ```
+"env." you can find all jenkins environment variables. All jenkins variable can be found at  <jenkins url>:8080/pipeline-syntax/globals#env
