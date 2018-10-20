@@ -14,6 +14,13 @@ node {
       }else{
         echo "this whoami = not sure"
       }
+
+      try{
+        exit 1
+      }catch(exc){
+        echo "something is wrong"
+        throw
+      }
     }
 
     stage('Test Baidu') {
