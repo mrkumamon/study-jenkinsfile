@@ -14,13 +14,6 @@ node {
       }else{
         echo "this whoami = not sure"
       }
-
-      try {
-        a=4/0
-      }catch(exec){
-        echo 'Something failed, I should sound the klaxons!'
-        throw
-      }
     }
 
     stage('Test Baidu') {
