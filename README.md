@@ -30,3 +30,5 @@ withEnv(["whoami=GabrielWu","second=2","third=3"]){
   echo "what's ${env.whoami}, what's ${env.second}, what's ${env.third}"
 }
 ```
+Scripted Pipeline is serially executed from the top of a Jenkinsfile downwards, like most traditional scripts in Groovy or other languages. Providing flow control therefore rests on Groovy expressions, such as the if/else conditionals, for example:
+1: 从上到下执行。

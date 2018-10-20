@@ -8,6 +8,20 @@ node {
     withEnv(["whoami=GabrielWu","second=2","third=3"]){
       echo "what's ${env.whoami}, what's ${env.second}, what's ${env.third}"
     }
+    stage('scripted 01') {
+      if(env.whoami=="GabrielWu"){
+        echo "this whoami = ${env.whoami}"
+      }else{
+        echo "this whoami = not sure"
+      }
+
+      try {
+        a=4/0
+      }catch(exec){
+        echo 'Something failed, I should sound the klaxons!'
+        throw
+      }
+    }
 
     stage('Test Baidu') {
         sh "curl baidu.com"
