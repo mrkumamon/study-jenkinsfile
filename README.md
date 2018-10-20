@@ -34,7 +34,7 @@ Scripted Pipeline is serially executed from the top of a Jenkinsfile downwards, 
 1: 从上到下执行。
 
 
-try, catch finally
+try, catch finally。 Use 'error' instead of 'throw', 'throw' is not gonna work
 ```
 try {
     sh 'exit 1'
