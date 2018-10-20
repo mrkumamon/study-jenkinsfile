@@ -2,6 +2,7 @@ node {
     stage('Test Baidu') {
         sh "curl baidu.com"
         print("BuildResult="+currentBuild.result)
+        sh "exit 1"
     }
     stage('Deploy') {
       stage('Deploy') {
