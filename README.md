@@ -1,3 +1,8 @@
+# setup jenkins in gcp
+```
+use username/password and add kubernetes plugin after install jenkins
+```
+
 # how to configure kubernetes plugin
 ```
 find the cluster
