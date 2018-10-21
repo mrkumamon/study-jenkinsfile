@@ -1,6 +1,7 @@
 # setup jenkins in gcp
 ```
 use username/password and add kubernetes plugin after install jenkins
+https://cloud.google.com/solutions/configuring-jenkins-kubernetes-engine
 ```
 
 # how to configure kubernetes plugin
