@@ -2,6 +2,7 @@
 ```
 use username/password and add kubernetes plugin after install jenkins
 https://cloud.google.com/solutions/configuring-jenkins-kubernetes-engine
+https://cloud.google.com/solutions/jenkins-on-kubernetes-engine
 ```
 
 # how to configure kubernetes plugin
